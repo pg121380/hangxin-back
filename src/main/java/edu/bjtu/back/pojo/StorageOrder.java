@@ -36,6 +36,9 @@ public class StorageOrder {
     // 订单金额
     private String summary;
 
+    // 仓库编码
+    private String storeCode;
+
     // 库存编码
     private String storeName;
 

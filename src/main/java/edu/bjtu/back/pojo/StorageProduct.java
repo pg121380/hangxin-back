@@ -20,6 +20,9 @@ public class StorageProduct {
     private String sequenceNumber;
 
     // 商品编码
+    private String productCode;
+
+    // 商品名称
     private String productName;
 
     // 是否赠品
