@@ -41,4 +41,7 @@ public class TraceResult {
 
     // 交易时间戳
     private String timeStamp;
+
+    // 查询次数
+    private int traceCount;
 }
