@@ -83,6 +83,7 @@ public class StorageController {
     public Map<String, Object> getStorageOrderPage(@RequestParam("pageNo") int pageNo,
                                                    @RequestParam("pageSize") int pageSize,
                                                    @RequestParam("createTimeStart") String createTimeStart,
+                                                   @RequestParam("createTimeEnd") String createTimeEnd,
                                                    @RequestParam("supplierName") String supplierName,
                                                    @RequestParam("storageNo") String storageNo){
 
