@@ -1,7 +1,9 @@
 package edu.bjtu.back.controller;
 
+import edu.bjtu.back.pojo.Order;
+import edu.bjtu.back.pojo.PurchaseProduct;
 import edu.bjtu.back.pojo.SaleProduct;
-import edu.bjtu.back.vo.OrderFolwWithUserVo;
+import edu.bjtu.back.vo.OrderFlowWithUserVo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +27,10 @@ public class SaleOrderController {
 
     private List<SaleProduct> saleOrderChildren;
 
-    private List<OrderFolwWithUserVo> saleOrderFlowList;
+    private List<OrderFlowWithUserVo> saleOrderFlowList;
+
+    private List<PurchaseProduct> purchaseProductList;
+
 
     {
         saleOrderChildren = new ArrayList<>();
@@ -43,16 +48,29 @@ public class SaleOrderController {
 
         saleOrderFlowList = new ArrayList<>();
         //String id, String purchaseNo, String saleNo, String handle, String content, long createTime, long createUserId, long deptId, String companyName, int deptName, int account
-        OrderFolwWithUserVo orderFolwWithUserVo = new OrderFolwWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
-        OrderFolwWithUserVo orderFolwWithUserVo1 = new OrderFolwWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
-        OrderFolwWithUserVo orderFolwWithUserVo2 = new OrderFolwWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
-        OrderFolwWithUserVo orderFolwWithUserVo3 = new OrderFolwWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
-        OrderFolwWithUserVo orderFolwWithUserVo4 = new OrderFolwWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
-        saleOrderFlowList.add(orderFolwWithUserVo);
-        saleOrderFlowList.add(orderFolwWithUserVo1);
-        saleOrderFlowList.add(orderFolwWithUserVo2);
-        saleOrderFlowList.add(orderFolwWithUserVo3);
-        saleOrderFlowList.add(orderFolwWithUserVo4);
+        OrderFlowWithUserVo orderFlowWithUserVo = new OrderFlowWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
+        OrderFlowWithUserVo orderFlowWithUserVo1 = new OrderFlowWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
+        OrderFlowWithUserVo orderFlowWithUserVo2 = new OrderFlowWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
+        OrderFlowWithUserVo orderFlowWithUserVo3 = new OrderFlowWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
+        OrderFlowWithUserVo orderFlowWithUserVo4 = new OrderFlowWithUserVo("orderfolw-1", "purchase-1", "sale-order-1", "协商", "同意", 1632571572l, 5783264325l, 328534l, "宝钢", 123,321);
+        saleOrderFlowList.add(orderFlowWithUserVo);
+        saleOrderFlowList.add(orderFlowWithUserVo1);
+        saleOrderFlowList.add(orderFlowWithUserVo2);
+        saleOrderFlowList.add(orderFlowWithUserVo3);
+        saleOrderFlowList.add(orderFlowWithUserVo4);
+
+        purchaseProductList = new ArrayList<>();
+        // String id, String purchaseNo, String sequenceNumber, String productCode, String productName, String productFormat, String unit, int isGift, int num, String price, String summary, long planTime, int deliverNum, int arrivalNum, int qualifiedNum, int unqualifiedNum, int storageNum, long updateTime
+        PurchaseProduct purchaseProduct = new PurchaseProduct("purchaseProduct-1", "purchase-1", "32rkjew34", "product-1", "钢材", "0.5mm", "吨", 0, 100, "100.0", "10000.0", 1632585600l, 100,100,100,0,100,1632582000l);
+        PurchaseProduct purchaseProduct1 = new PurchaseProduct("purchaseProduct-2", "purchase-1", "32rkjew35", "product-2", "钢材", "0.5mm", "吨", 0, 100, "100.0", "10000.0", 1632585600l, 100,100,100,0,100,1632582000l);
+        PurchaseProduct purchaseProduct2 = new PurchaseProduct("purchaseProduct-3", "purchase-1", "32rkjew36", "product-3", "钢材", "0.5mm", "吨", 0, 100, "100.0", "10000.0", 1632585600l, 100,100,100,0,100,1632582000l);
+        PurchaseProduct purchaseProduct3 = new PurchaseProduct("purchaseProduct-4", "purchase-1", "32rkjew37", "product-4", "钢材", "0.5mm", "吨", 0, 100, "100.0", "10000.0", 1632585600l, 100,100,100,0,100,1632582000l);
+        PurchaseProduct purchaseProduct4 = new PurchaseProduct("purchaseProduct-5", "purchase-1", "32rkjew38", "product-5", "钢材", "0.5mm", "吨", 0, 100, "100.0", "10000.0", 1632585600l, 100,100,100,0,100,1632582000l);
+        purchaseProductList.add(purchaseProduct);
+        purchaseProductList.add(purchaseProduct1);
+        purchaseProductList.add(purchaseProduct2);
+        purchaseProductList.add(purchaseProduct3);
+        purchaseProductList.add(purchaseProduct4);
 
     }
 
@@ -89,6 +107,22 @@ public class SaleOrderController {
         data.put("isReadOnly", 1);
         data.put("systemSource", 1);
         data.put("children", this.saleOrderChildren);
+        data.put("orderFlowList", this.saleOrderFlowList);
+        res.put("data", data);
+        return res;
+    }
+
+    @ResponseBody
+    @RequestMapping("/purchaseOrder/{id}")
+    public HashMap<String, Object> getPurchaseOrderDetail(@PathVariable("id") String id){
+        HashMap<String, Object> res = new HashMap<>();
+        res.put("code", 200);
+        res.put("message", "采购订单详情获取成功！");
+        HashMap<String, Object> data = new HashMap<>();
+        //String id, String purchaseNo, String saleNo, String supplierCode, String supplierName, String contractNo, long planTime, String addressTel, String telephone, String remarks, int summary, int status1, int status2, int status3, int status4, int transportMode, String transportCompany, String transportNo, long createTime, long updateTime, long createUserId, long updateUserId, int deptId, int isReadOnly, int systemSource
+        Order order = new Order("order-1", "purchase-1", "sale-order-1", "123", "宝钢", "contract-1", 1632585600l, "北京海淀", "12345678987", "无", 100000, 0,0,1,0,1,"顺丰速运", "SF432857324678325",1632553572l,1632571572l,123456789l,987654321l,1,1,1);
+        data.put("order", order);
+        data.put("list", this.purchaseProductList);
         data.put("orderFlowList", this.saleOrderFlowList);
         res.put("data", data);
         return res;

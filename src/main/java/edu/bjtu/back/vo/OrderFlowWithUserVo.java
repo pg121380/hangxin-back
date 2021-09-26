@@ -15,7 +15,7 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @ToString
-public class OrderFolwWithUserVo {
+public class OrderFlowWithUserVo {
 
     // id
     private String id;
@@ -50,7 +50,7 @@ public class OrderFolwWithUserVo {
     // 人员名称
     private int account;
 
-    public OrderFolwWithUserVo(String id, String purchaseNo, String saleNo, String handle, String content, long createTime, long createUserId, long deptId, String companyName, int deptName, int account) {
+    public OrderFlowWithUserVo(String id, String purchaseNo, String saleNo, String handle, String content, long createTime, long createUserId, long deptId, String companyName, int deptName, int account) {
         this.id = id;
         this.purchaseNo = purchaseNo;
         this.saleNo = saleNo;
