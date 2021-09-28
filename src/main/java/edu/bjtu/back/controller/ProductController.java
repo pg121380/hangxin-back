@@ -2,6 +2,7 @@ package edu.bjtu.back.controller;
 
 import edu.bjtu.back.pojo.Product;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -76,4 +77,19 @@ public class ProductController {
         return res;
     }
 
+    @ResponseBody
+    @RequestMapping("/product/{id}")
+    public HashMap<String, Object> getProductDetail(@PathVariable("id") String id){
+        HashMap<String, Object> res = new HashMap<>();
+        Product product = records.stream().filter(p -> p.getId().equals(id)).findFirst().get();
+        if (product != null) {
+            res.put("code", 200);
+            res.put("message", "物品详情查询成功！");
+            res.put("data", product);
+        } else {
+            res.put("code", 400);
+            res.put("message", "没有该id的商品！");
+        }
+        return res;
+    }
 }
