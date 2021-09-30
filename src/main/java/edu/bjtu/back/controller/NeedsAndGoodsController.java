@@ -51,10 +51,17 @@ public class NeedsAndGoodsController {
     }
 
     @ResponseBody
-    @RequestMapping
+    @RequestMapping("/needs/page")
     public HashMap<String, Object> iWantToBuy(int pageNo, int pageSize, String productName, String productCode, String categoryCode){
         HashMap<String, Object> res = new HashMap<>();
-        // todo:修改个别数据 添加我要卖接口
-        return null;
+        res.put("code", 200);
+        res.put("message", "我要买 数据获取成功！");
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("total", 10);
+        data.put("pages", 1);
+        data.put("records", wantBuyProducts);
+        data.put("page", 1);
+        res.put("data", data);
+        return res;
     }
 }
