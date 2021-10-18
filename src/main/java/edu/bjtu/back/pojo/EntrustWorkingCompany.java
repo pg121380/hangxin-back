@@ -5,15 +5,32 @@ public class EntrustWorkingCompany {
     private String entrustWorkingId;
     private String companyUp;
     private String companyDown;
-    private String stepNumber;
+    private int stepNumber;
     private String companyCode;
     private String companyName;
-    private String status;
+    private int status;
     private String createTime;
     private String updateTime;
-    private String deptId;
+    private long deptId;
 
-    public EntrustWorkingCompany(String id, String entrustWorkingId, String companyUp, String companyDown, String stepNumber, String companyCode, String companyName, String status, String createTime, String updateTime, String deptId) {
+    @Override
+    public String toString() {
+        return "EntrustWorkingCompany{" +
+                "id='" + id + '\'' +
+                ", entrustWorkingId='" + entrustWorkingId + '\'' +
+                ", companyUp='" + companyUp + '\'' +
+                ", companyDown='" + companyDown + '\'' +
+                ", stepNumber=" + stepNumber +
+                ", companyCode='" + companyCode + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", status=" + status +
+                ", createTime='" + createTime + '\'' +
+                ", updateTime='" + updateTime + '\'' +
+                ", deptId=" + deptId +
+                '}';
+    }
+
+    public EntrustWorkingCompany(String id, String entrustWorkingId, String companyUp, String companyDown, int stepNumber, String companyCode, String companyName, int status, String createTime, String updateTime, long deptId) {
         this.id = id;
         this.entrustWorkingId = entrustWorkingId;
         this.companyUp = companyUp;
@@ -59,11 +76,11 @@ public class EntrustWorkingCompany {
         this.companyDown = companyDown;
     }
 
-    public String getStepNumber() {
+    public int getStepNumber() {
         return stepNumber;
     }
 
-    public void setStepNumber(String stepNumber) {
+    public void setStepNumber(int stepNumber) {
         this.stepNumber = stepNumber;
     }
 
@@ -83,11 +100,11 @@ public class EntrustWorkingCompany {
         this.companyName = companyName;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -107,28 +124,11 @@ public class EntrustWorkingCompany {
         this.updateTime = updateTime;
     }
 
-    public String getDeptId() {
+    public long getDeptId() {
         return deptId;
     }
 
-    public void setDeptId(String deptId) {
+    public void setDeptId(long deptId) {
         this.deptId = deptId;
-    }
-
-    @Override
-    public String toString() {
-        return "EntrustWorkingCompany{" +
-                "id='" + id + '\'' +
-                ", entrustWorkingId='" + entrustWorkingId + '\'' +
-                ", companyUp='" + companyUp + '\'' +
-                ", companyDown='" + companyDown + '\'' +
-                ", stepNumber='" + stepNumber + '\'' +
-                ", companyCode='" + companyCode + '\'' +
-                ", companyName='" + companyName + '\'' +
-                ", status='" + status + '\'' +
-                ", createTime='" + createTime + '\'' +
-                ", updateTime='" + updateTime + '\'' +
-                ", deptId='" + deptId + '\'' +
-                '}';
     }
 }
