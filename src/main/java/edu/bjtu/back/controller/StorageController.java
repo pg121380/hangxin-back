@@ -114,8 +114,6 @@ public class StorageController {
         map.put("storageProduct", storageProductList);
 
         return map;
-
-
     }
 
     // 库存信息分页查询
