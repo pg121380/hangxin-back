@@ -42,8 +42,8 @@ public class EntrustWorkingController {
     @RequestMapping("/entrustWorkingCompany/page")
     public ReturnObject getEntrustWorkingCompantPage(
             @RequestParam("pageNo") int pageNo, @RequestParam("pageSize") int pageSize,
-            @RequestParam("entrustWorkingNo") String entrustWorkingNo, @RequestParam("createTimeStart") String createTimeStart,
-            @RequestParam("createTimeEnd") String createTimeEnd, @RequestParam("status") int status
+            @RequestParam("entrustWorkingNo") String entrustWorkingNo, @RequestParam(value = "createTimeStart" ,  required = false) String createTimeStart,
+            @RequestParam(value ="createTimeEnd", required = false) String createTimeEnd, @RequestParam(value = "status" , required = false) Integer status
     ){
 
         HashMap<String, Object> data = new HashMap<>();
