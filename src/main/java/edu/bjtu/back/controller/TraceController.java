@@ -54,6 +54,10 @@ public class TraceController {
         TraceContent traceContent2 = new TraceContent(2, "label2", "value2", "fileName2", "https://img-chache.oss-cn-beijing.aliyuncs.com/hx/%E5%90%88%E5%90%8C.txt?Expires=1634558972&OSSAccessKeyId=TMP.3Ke2vtJYd1LZmshCcSoETxAhf3pmzGcmU8uyWEjGhDQ8vDUVGhHkPE9j76cBYsv3Bmy1aCY7CDQbNQuNeQibUg2yHb1wCx&Signature=ZA2mIDxnPPgUwpkzt2qXDTmZWJA%3D&response-content-type=application%2Foctet-stream");
         TraceContent traceContent3 = new TraceContent(3, "label3", "value3", "fileName3", "https://img-chache.oss-cn-beijing.aliyuncs.com/hx/%E5%90%88%E5%90%8C.txt?Expires=1634558972&OSSAccessKeyId=TMP.3Ke2vtJYd1LZmshCcSoETxAhf3pmzGcmU8uyWEjGhDQ8vDUVGhHkPE9j76cBYsv3Bmy1aCY7CDQbNQuNeQibUg2yHb1wCx&Signature=ZA2mIDxnPPgUwpkzt2qXDTmZWJA%3D&response-content-type=application%2Foctet-stream");
 
+        contentList.add(traceContent);
+        contentList.add(traceContent2);
+        contentList.add(traceContent3);
+
         TraceFlow traceFlow = new TraceFlow("label1", "value1", "flowName1", "fileName1", "https://img-chache.oss-cn-beijing.aliyuncs.com/hx/%E5%90%88%E5%90%8C.txt?Expires=1634558972&OSSAccessKeyId=TMP.3Ke2vtJYd1LZmshCcSoETxAhf3pmzGcmU8uyWEjGhDQ8vDUVGhHkPE9j76cBYsv3Bmy1aCY7CDQbNQuNeQibUg2yHb1wCx&Signature=ZA2mIDxnPPgUwpkzt2qXDTmZWJA%3D&response-content-type=application%2Foctet-stream", "1", contentList);
         TraceFlow traceFlow1 = new TraceFlow("label2", "value2", "flowName2", "fileName2", "https://img-chache.oss-cn-beijing.aliyuncs.com/hx/%E5%90%88%E5%90%8C.txt?Expires=1634558972&OSSAccessKeyId=TMP.3Ke2vtJYd1LZmshCcSoETxAhf3pmzGcmU8uyWEjGhDQ8vDUVGhHkPE9j76cBYsv3Bmy1aCY7CDQbNQuNeQibUg2yHb1wCx&Signature=ZA2mIDxnPPgUwpkzt2qXDTmZWJA%3D&response-content-type=application%2Foctet-stream", "1", contentList);
         TraceFlow traceFlow2 = new TraceFlow("label3", "value3", "flowName3", "fileName3", "https://img-chache.oss-cn-beijing.aliyuncs.com/hx/%E5%90%88%E5%90%8C.txt?Expires=1634558972&OSSAccessKeyId=TMP.3Ke2vtJYd1LZmshCcSoETxAhf3pmzGcmU8uyWEjGhDQ8vDUVGhHkPE9j76cBYsv3Bmy1aCY7CDQbNQuNeQibUg2yHb1wCx&Signature=ZA2mIDxnPPgUwpkzt2qXDTmZWJA%3D&response-content-type=application%2Foctet-stream", "1", contentList);
