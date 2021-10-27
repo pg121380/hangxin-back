@@ -1,6 +1,6 @@
 package edu.bjtu.back.pojo;
 
-public class EntrustWorkingProductList {
+public class EntrustWorkingProduct {
     private String id;
     private String entrustWorkingNo;
     private int sequenceNumber;
@@ -36,7 +36,7 @@ public class EntrustWorkingProductList {
                 '}';
     }
 
-    public EntrustWorkingProductList(String id, String entrustWorkingNo, int sequenceNumber, String productCode, String productName, String productFormat, String unit, int processNum, long startTime, long finishTime, String processFileId, String processFileName, long createTime, long updateTime) {
+    public EntrustWorkingProduct(String id, String entrustWorkingNo, int sequenceNumber, String productCode, String productName, String productFormat, String unit, int processNum, long startTime, long finishTime, String processFileId, String processFileName, long createTime, long updateTime) {
         this.id = id;
         this.entrustWorkingNo = entrustWorkingNo;
         this.sequenceNumber = sequenceNumber;
