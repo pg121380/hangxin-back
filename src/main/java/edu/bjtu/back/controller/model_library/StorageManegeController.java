@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * ClassName: StorageManegeController
@@ -28,6 +29,24 @@ public class StorageManegeController {
         HashMap<String, Object> res = new HashMap<>();
         res.put("code", 200);
         res.put("msg", "成功设置:" + storageId + "的库存下限为" + inf);
+        return res;
+    }
+
+    @RequestMapping("setStocks")
+    public HashMap<String, Object> setStocks(String storageId, Integer stocks){
+        HashMap<String, Object> res = new HashMap<>();
+        res.put("code", 200);
+        res.put("msg", "成功设置:" + storageId + "的库存为" + stocks);
+        return res;
+    }
+
+    @RequestMapping("queryStocks")
+    public HashMap<String, Object> queryStocks(String storageId){
+        HashMap<String, Object> res = new HashMap<>();
+        res.put("code", 200);
+        int random = new Random().nextInt();
+        res.put("msg", storageId + "的库存为" + random);
+        res.put("stocks", random);
         return res;
     }
 
