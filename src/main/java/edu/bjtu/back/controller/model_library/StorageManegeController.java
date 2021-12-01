@@ -25,7 +25,7 @@ public class StorageManegeController {
      * @return java.util.HashMap<java.lang.String,java.lang.Object>
      **/
     @RequestMapping("setStorageInf")
-    public HashMap<String, Object> setStorageInf(String storageId, Integer inf){
+    public HashMap<String, Object> setStorageInf(String storageId, int inf){
         HashMap<String, Object> res = new HashMap<>();
         res.put("code", 200);
         res.put("msg", "成功设置:" + storageId + "的库存下限为" + inf);
@@ -33,7 +33,7 @@ public class StorageManegeController {
     }
 
     @RequestMapping("setStocks")
-    public HashMap<String, Object> setStocks(String storageId, Integer stocks){
+    public HashMap<String, Object> setStocks(String storageId, int stocks){
         HashMap<String, Object> res = new HashMap<>();
         res.put("code", 200);
         res.put("msg", "成功设置:" + storageId + "的库存为" + stocks);
@@ -44,7 +44,8 @@ public class StorageManegeController {
     public HashMap<String, Object> queryStocks(String storageId){
         HashMap<String, Object> res = new HashMap<>();
         res.put("code", 200);
-        int random = new Random().nextInt();
+        int random = Math.abs(new Random().nextInt()) % 2314;
+        System.out.println(random);
         res.put("msg", storageId + "的库存为" + random);
         res.put("stocks", random);
         return res;
