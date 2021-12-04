@@ -25,7 +25,7 @@ public class StorageController {
 
     { // 构造代码块
         // 为什么用大括号包住就不用写
-        StorageRecord storage1 = new StorageRecord("storage-1","goods-1","测温计","规格","只","4200",1L,"repertory-1","王五开",11L,"1630000000l","dept-1","user-11","user-11","1630000000l");
+        StorageRecord storage1 = new StorageRecord("storage-1","goods-1","测温枪","规格","只","4200",1L,"repertory-1","王五开",11L,"1630000000l","dept-1","user-11","user-11","1630000000l");
         StorageRecord storage2 = new StorageRecord("storage-2","goods-2","livox激光雷达","规格","个","231",2L,"repertory-2","姜文",22L,"1630000000l","dept-1","user-12","user-12","1630000000l");
         StorageRecord storage3 = new StorageRecord("storage-3","goods-3","海康摄像头","规格","只","4703",3L,"repertory-1","曹安满",33L,"1630000000l","dept-1","user-13","user-13","1630000000l");
         StorageRecord storage4 = new StorageRecord("storage-4","goods-4","梯子","规格","只","4520",4L,"repertory-1","刘能",44L,"1630000000l","dept-1","user-11","user-14","1630000000l");

@@ -64,6 +64,7 @@ public class EntrustWorkingController {
     }
 
 
+    
     @RequestMapping("/entrustWorking/{id}")
     public ReturnObject entrustWorkingDetail(@PathVariable("id") String id){
         HashMap<String, Object> data = new HashMap<>();
