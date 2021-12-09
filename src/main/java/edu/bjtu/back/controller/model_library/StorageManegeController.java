@@ -1,5 +1,6 @@
 package edu.bjtu.back.controller.model_library;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -48,6 +49,19 @@ public class StorageManegeController {
         System.out.println(random);
         res.put("msg", storageId + "的库存为" + random);
         res.put("stocks", random);
+        return res;
+    }
+
+    @RequestMapping("/goodsStock/queryCurrent")
+    public HashMap<String, Object> queryCurrent(String[] stocksId){
+        HashMap<String, Object> res = new HashMap<>();
+        res.put("code", 200);
+        res.put("message", "库存信息请求成功！");
+        CurrentStock[] stocks = new CurrentStock[stocksId.length];
+        for (int i = 0;i < stocks.length;i++) {
+            stocks[i] = new CurrentStock(stocksId[i], String.valueOf(Math.abs(new Random().nextInt()) % 214));
+        }
+        res.put("data", stocks);
         return res;
     }
 

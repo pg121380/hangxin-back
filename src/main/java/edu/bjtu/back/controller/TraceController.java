@@ -27,13 +27,13 @@ import java.util.List;
 public class TraceController {
 
     private TraceResult traceResult = new TraceResult("77df263f49123356d28a4a8715d25bf5b980beeeb503cab46ea61ac9f3320eda",
-                                                        "hx-blockchain",
-                                                        "livox激光雷达",
+                                                        "慧农链-blockchain",
+                                                        "桃子",
                                                         "dji-大疆",
                                                         3000.0,
                                                         "51e8ea280b44e16934d4d611901f3d3afc41789840acdff81942c2f65009cd52",
                                                         256,
-                                                        "2021-09-23 11:20:40",
+                                                        "2021-12-10 11:20:40",
                                                         15);
 
     private List<TraceConfigProduct> configProductList = new ArrayList<>();
